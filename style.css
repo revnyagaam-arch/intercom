@@ -790,3 +790,22 @@ a {
         min-height: 145px;
     }
 }
+
+/* Центрирование кассовой техники */
+
+.cash-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    max-width: 780px;
+    margin: 0 auto;
+}
+
+.centered-heading {
+    text-align: center !important;
+}
+
+@media (max-width: 580px) {
+    .cash-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
