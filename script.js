@@ -1,44 +1,73 @@
-// ПЛАВНОЕ ПОЯВЛЕНИЕ ЭЛЕМЕНТОВ
-
-const animatedElements = document.querySelectorAll(
-    ".service-card, .about, .request"
-);
-
-const observer = new IntersectionObserver(
-    (entries) => {
-        entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add("visible");
-                observer.unobserve(entry.target);
-            }
-        });
-    },
-    {
-        threshold: 0.15
-    }
-);
-
-animatedElements.forEach((element) => {
-    element.classList.add("reveal");
-    observer.observe(element);
-});
+/* =====================================
+   INTERCOM — JAVASCRIPT
+===================================== */
 
 
-// ДИНАМИЧЕСКИЙ ГОД
+// ТЕКУЩИЙ ГОД В ПОДВАЛЕ
 
-const footerText = document.querySelector(".footer p");
+const yearElement = document.getElementById("current-year");
 
-if (footerText) {
-    footerText.textContent =
-        `© ${new Date().getFullYear()} ИНТЕРКОМ. Все права защищены.`;
+if (yearElement) {
+    yearElement.textContent = new Date().getFullYear();
 }
 
 
-// ПЛАВЫЙ ПЕРЕХОД ПО ССЫЛКАМ
+// АНИМАЦИЯ ПОЯВЛЕНИЯ
+
+const animatedElements = document.querySelectorAll(
+    ".service-card, .about, .request, .contacts"
+);
+
+if ("IntersectionObserver" in window) {
+
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("visible");
+                    observer.unobserve(entry.target);
+                }
+
+            });
+        },
+        {
+            threshold: 0.12
+        }
+    );
+
+    animatedElements.forEach((element) => {
+        element.classList.add("reveal");
+        observer.observe(element);
+    });
+
+} else {
+
+    animatedElements.forEach((element) => {
+        element.classList.add("visible");
+    });
+
+}
+
+
+// ПЛАВНАЯ ПРОКРУТКА
 
 document.querySelectorAll('a[href^="#"]').forEach((link) => {
+
     link.addEventListener("click", (event) => {
-        const target = document.querySelector(link.getAttribute("href"));
+
+        const targetId = link.getAttribute("href");
+
+        if (targetId === "#") {
+            event.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+            return;
+        }
+
+        const target = document.querySelector(targetId);
 
         if (target) {
             event.preventDefault();
@@ -47,53 +76,41 @@ document.querySelectorAll('a[href^="#"]').forEach((link) => {
                 behavior: "smooth"
             });
         }
+
     });
+
 });
 
-/* АНИМАЦИЯ ПОЯВЛЕНИЯ */
 
-.reveal {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.7s ease, transform 0.7s ease;
-}
+// ФОРМА ЗАЯВКИ
 
-.reveal.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
+const requestForm = document.getElementById("request-form");
 
-/* ПОДСВЕТКА ПРИ НАВЕДЕНИИ */
+if (requestForm) {
 
-.service-card {
-    cursor: default;
-    transition:
-        transform 0.3s ease,
-        border-color 0.3s ease,
-        box-shadow 0.3s ease;
-}
+    requestForm.addEventListener("submit", (event) => {
 
-.service-card:hover {
-    transform: translateY(-8px);
-    border-color: #438bff;
-    box-shadow: 0 12px 35px rgba(38, 119, 255, 0.15);
-}
+        event.preventDefault();
 
-/* ВЫДЕЛЕНИЕ ТЕКСТА */
+        const formData = new FormData(requestForm);
 
-::selection {
-    background: #2677ff;
-    color: #ffffff;
-}
+        const name = formData.get("name").trim();
+        const phone = formData.get("phone").trim();
+        const service = formData.get("service");
+        const message = formData.get("message").trim();
 
-/* УВАЖЕНИЕ К НАСТРОЙКЕ УМЕНЬШЕНИЯ АНИМАЦИИ */
+        const status = document.getElementById("form-status");
 
-@media (prefers-reduced-motion: reduce) {
-    *,
-    *::before,
-    *::after {
-        scroll-behavior: auto !important;
-        transition-duration: 0.01ms !important;
-        animation-duration: 0.01ms !important;
-    }
+        if (!name || !phone || !service || !message) {
+
+            status.textContent = "Пожалуйста, заполните все поля.";
+            return;
+
+        }
+
+        status.textContent =
+            "Форма готова к отправке. Подключение Telegram будет следующим этапом.";
+
+    });
+
 }
