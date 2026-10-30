@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Оставить заявку — ИНТЕРКОМ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="container nav-container">
+        <a href="index.html" class="logo">
+            <span>ИНТЕРКОМ</span>
+            <small>ГРУППА КОМПАНИЙ</small>
+        </a>
+
+        <nav class="navigation">
+            <a href="index.html">Главная</a>
+            <a href="catalog.html">Каталог</a>
+            <a href="about.html">О компании</a>
+            <a href="request.html" class="nav-button active">Оставить заявку</a>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <section class="page-hero">
+        <div class="container">
+            <span class="eyebrow">ИНТЕРКОМ / ЗАЯВКА</span>
+            <h1>ОСТАВИТЬ <span>ЗАЯВКУ</span></h1>
+            <p>Заполните форму, и мы свяжемся с вами.</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container request-layout">
+
+            <div class="request-info">
+                <span class="eyebrow">МЫ ГОТОВЫ ПОМОЧЬ</span>
+                <h2>РАССКАЖИТЕ, ЧТО ВАС ИНТЕРЕСУЕТ</h2>
+                <p>
+                    Опишите вашу задачу или проблему с оборудованием.
+                    Мы ознакомимся с обращением и свяжемся с вами.
+                </p>
+
+                <div class="request-benefit">
+                    <span>01</span>
+                    <div>
+                        <h3>Простая заявка</h3>
+                        <p>Всего несколько полей для заполнения.</p>
+                    </div>
+                </div>
+
+                <div class="request-benefit">
+                    <span>02</span>
+                    <div>
+                        <h3>Обратная связь</h3>
+                        <p>Мы свяжемся с вами по указанному телефону.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="request-form-card">
+                <h2>НОВАЯ ЗАЯВКА</h2>
+                <p class="form-description">Пожалуйста, заполните все обязательные поля.</p>
+
+                <form id="request-form">
+                    <label for="name">Ваше имя *</label>
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Введите ваше имя"
+                        required
+                    >
+
+                    <label for="phone">Номер телефона *</label>
+                    <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        placeholder="+7 (___) ___-__-__"
+                        required
+                    >
+
+                    <label for="service">Выберите услугу *</label>
+                    <select id="service" name="service" required>
+                        <option value="">Выберите услугу</option>
+                        <option value="Ремонт">Ремонт</option>
+                        <option value="Обслуживание">Обслуживание</option>
+                        <option value="Настройка">Настройка</option>
+                        <option value="Другое">Другое</option>
+                    </select>
+
+                    <label for="message">Описание обращения *</label>
+                    <textarea
+                        id="message"
+                        name="message"
+                        rows="5"
+                        placeholder="Опишите, что необходимо сделать..."
+                        required
+                    ></textarea>
+
+                    <button type="submit" class="button primary form-submit">
+                        Отправить заявку
+                    </button>
+
+                    <div id="form-status" class="form-status" aria-live="polite"></div>
+                </form>
+            </div>
+
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+    <div class="container footer-content">
+        <div class="logo">
+            <span>ИНТЕРКОМ</span>
+            <small>ГРУППА КОМПАНИЙ</small>
+        </div>
+        <p>© <span id="year"></span> ИНТЕРКОМ. Все права защищены.</p>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
