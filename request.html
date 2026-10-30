@@ -29,87 +29,61 @@
         <div class="container">
             <span class="eyebrow">ИНТЕРКОМ / ЗАЯВКА</span>
             <h1>ОСТАВИТЬ <span>ЗАЯВКУ</span></h1>
-            <p>Заполните форму, и мы свяжемся с вами.</p>
+            <p>Опишите вашу задачу, и мы свяжемся с вами.</p>
         </div>
     </section>
 
-    <section class="section">
-        <div class="container request-layout">
+    <section class="section request-centered">
+        <div class="request-form-card request-compact">
+            <span class="eyebrow">ОБРАТНАЯ СВЯЗЬ</span>
+            <h2>НОВАЯ ЗАЯВКА</h2>
+            <p class="form-description">
+                Заполните форму, чтобы оставить обращение.
+            </p>
 
-            <div class="request-info">
-                <span class="eyebrow">МЫ ГОТОВЫ ПОМОЧЬ</span>
-                <h2>РАССКАЖИТЕ, ЧТО ВАС ИНТЕРЕСУЕТ</h2>
-                <p>
-                    Опишите вашу задачу или проблему с оборудованием.
-                    Мы ознакомимся с обращением и свяжемся с вами.
-                </p>
+            <form id="request-form">
+                <label for="name">Ваше имя *</label>
+                <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Введите ваше имя"
+                    required
+                >
 
-                <div class="request-benefit">
-                    <span>01</span>
-                    <div>
-                        <h3>Простая заявка</h3>
-                        <p>Всего несколько полей для заполнения.</p>
-                    </div>
-                </div>
+                <label for="phone">Номер телефона *</label>
+                <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    placeholder="+7 (___) ___-__-__"
+                    required
+                >
 
-                <div class="request-benefit">
-                    <span>02</span>
-                    <div>
-                        <h3>Обратная связь</h3>
-                        <p>Мы свяжемся с вами по указанному телефону.</p>
-                    </div>
-                </div>
-            </div>
+                <label for="service">Выберите услугу *</label>
+                <select id="service" name="service" required>
+                    <option value="">Выберите услугу</option>
+                    <option value="Ремонт">Ремонт</option>
+                    <option value="Обслуживание">Обслуживание</option>
+                    <option value="Настройка">Настройка</option>
+                    <option value="Другое">Другое</option>
+                </select>
 
-            <div class="request-form-card">
-                <h2>НОВАЯ ЗАЯВКА</h2>
-                <p class="form-description">Пожалуйста, заполните все обязательные поля.</p>
+                <label for="message">Описание обращения *</label>
+                <textarea
+                    id="message"
+                    name="message"
+                    rows="4"
+                    placeholder="Опишите, что необходимо сделать..."
+                    required
+                ></textarea>
 
-                <form id="request-form">
-                    <label for="name">Ваше имя *</label>
-                    <input
-                        type="text"
-                        id="name"
-                        name="name"
-                        placeholder="Введите ваше имя"
-                        required
-                    >
+                <button type="submit" class="button primary form-submit">
+                    Отправить заявку
+                </button>
 
-                    <label for="phone">Номер телефона *</label>
-                    <input
-                        type="tel"
-                        id="phone"
-                        name="phone"
-                        placeholder="+7 (___) ___-__-__"
-                        required
-                    >
-
-                    <label for="service">Выберите услугу *</label>
-                    <select id="service" name="service" required>
-                        <option value="">Выберите услугу</option>
-                        <option value="Ремонт">Ремонт</option>
-                        <option value="Обслуживание">Обслуживание</option>
-                        <option value="Настройка">Настройка</option>
-                        <option value="Другое">Другое</option>
-                    </select>
-
-                    <label for="message">Описание обращения *</label>
-                    <textarea
-                        id="message"
-                        name="message"
-                        rows="5"
-                        placeholder="Опишите, что необходимо сделать..."
-                        required
-                    ></textarea>
-
-                    <button type="submit" class="button primary form-submit">
-                        Отправить заявку
-                    </button>
-
-                    <div id="form-status" class="form-status" aria-live="polite"></div>
-                </form>
-            </div>
-
+                <div id="form-status" class="form-status" aria-live="polite"></div>
+            </form>
         </div>
     </section>
 </main>
