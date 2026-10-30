@@ -3,277 +3,152 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <meta name="description" content="ИНТЕРКОМ — группа компаний. Ремонт и обслуживание банковского, кассового оборудования и компьютеров.">
-
+    <meta name="theme-color" content="#142b4b">
     <title>ИНТЕРКОМ — Группа компаний</title>
-
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-    <!-- HEADER -->
-    <header class="header">
-        <div class="container header-content">
+<header class="header">
+    <div class="container nav-container">
+        <a href="index.html" class="logo">
+            <span>ИНТЕРКОМ</span>
+            <small>ГРУППА КОМПАНИЙ</small>
+        </a>
 
-            <a href="#" class="logo">
-                <span class="logo-name">ИНТЕРКОМ</span>
-                <span class="logo-subtitle">ГРУППА КОМПАНИЙ</span>
-            </a>
+        <nav class="navigation">
+            <a href="index.html" class="active">Главная</a>
+            <a href="catalog.html">Каталог</a>
+            <a href="about.html">О компании</a>
+            <a href="request.html" class="nav-button">Оставить заявку</a>
+        </nav>
+    </div>
+</header>
 
-            <nav class="navigation">
-                <a href="#services">Услуги</a>
-                <a href="#about">О компании</a>
-                <a href="#contacts">Контакты</a>
-            </nav>
+<main>
+    <section class="hero">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <span class="eyebrow">НАДЁЖНЫЙ СЕРВИС И ТЕХНОЛОГИИ</span>
 
-            <a href="#request" class="header-button">
-                Оставить заявку
-            </a>
-
-        </div>
-    </header>
-
-
-    <main>
-
-        <!-- HERO -->
-        <section class="hero">
-            <div class="container hero-content">
-
-                <div class="hero-text">
-
-                    <span class="hero-label">
-                        ГРУППА КОМПАНИЙ ИНТЕРКОМ
-                    </span>
-
-                    <h1>
-                        ТЕХНОЛОГИИ.<br>
-                        НАДЁЖНОСТЬ.<br>
-                        <span>СЕРВИС.</span>
-                    </h1>
-
-                    <p>
-                        Профессиональный ремонт, обслуживание
-                        банковского и кассового оборудования,
-                        а также компьютерной техники.
-                    </p>
-
-                    <div class="hero-buttons">
-                        <a href="#services" class="primary-button">
-                            Наши услуги
-                        </a>
-
-                        <a href="#request" class="secondary-button">
-                            Оставить заявку →
-                        </a>
-                    </div>
-
-                </div>
-
-                <div class="hero-decoration">
-                    <div class="decoration-card">
-                        <span class="decoration-number">01 / SERVICE</span>
-                        <span class="decoration-title">INTERCOM</span>
-                        <span class="decoration-line"></span>
-                        <span class="decoration-caption">
-                            TECHNICAL SUPPORT
-                        </span>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-
-        <!-- SERVICES -->
-        <section class="services section" id="services">
-            <div class="container">
-
-                <span class="section-label">НАПРАВЛЕНИЯ РАБОТЫ</span>
-                <h2>НАШИ УСЛУГИ</h2>
-
-                <div class="services-grid">
-
-                    <article class="service-card">
-                        <span class="service-number">01</span>
-                        <h3>Кассовое оборудование</h3>
-                        <p>
-                            Ремонт, настройка и обслуживание
-                            кассовой техники.
-                        </p>
-                    </article>
-
-                    <article class="service-card">
-                        <span class="service-number">02</span>
-                        <h3>Банковское оборудование</h3>
-                        <p>
-                            Диагностика, ремонт и техническое
-                            обслуживание банковской техники.
-                        </p>
-                    </article>
-
-                    <article class="service-card">
-                        <span class="service-number">03</span>
-                        <h3>Компьютерная техника</h3>
-                        <p>
-                            Ремонт, настройка и обслуживание
-                            компьютеров и периферии.
-                        </p>
-                    </article>
-
-                    <article class="service-card">
-                        <span class="service-number">04</span>
-                        <h3>Техническая поддержка</h3>
-                        <p>
-                            Помощь в решении технических
-                            проблем и настройке оборудования.
-                        </p>
-                    </article>
-
-                </div>
-            </div>
-        </section>
-
-
-        <!-- ABOUT -->
-        <section class="about section" id="about">
-            <div class="container">
-
-                <span class="section-label">КТО МЫ</span>
-                <h2>О КОМПАНИИ</h2>
-
-                <div class="about-content">
-                    <p>
-                        ИНТЕРКОМ — группа компаний, специализирующаяся
-                        на ремонте и обслуживании банковского,
-                        кассового оборудования и компьютерной техники.
-                    </p>
-
-                    <p>
-                        Наша задача — помогать организациям
-                        поддерживать оборудование в рабочем состоянии
-                        и решать возникающие технические вопросы.
-                    </p>
-                </div>
-
-            </div>
-        </section>
-
-
-        <!-- REQUEST -->
-        <section class="request section" id="request">
-            <div class="container">
-
-                <span class="section-label">ОБРАТНАЯ СВЯЗЬ</span>
-                <h2>ОСТАВИТЬ ЗАЯВКУ</h2>
-
-                <p class="request-description">
-                    Заполните форму, и мы свяжемся с вами.
-                </p>
-
-                <form class="request-form" id="request-form">
-
-                    <div class="form-group">
-                        <label for="client-name">Ваше имя</label>
-                        <input
-                            type="text"
-                            id="client-name"
-                            name="name"
-                            placeholder="Введите ваше имя"
-                            maxlength="80"
-                            required
-                        >
-                    </div>
-
-                    <div class="form-group">
-                        <label for="client-phone">Номер телефона</label>
-                        <input
-                            type="tel"
-                            id="client-phone"
-                            name="phone"
-                            placeholder="+7 (___) ___-__-__"
-                            maxlength="25"
-                            required
-                        >
-                    </div>
-
-                    <div class="form-group">
-                        <label for="client-service">Выберите услугу</label>
-
-                        <select id="client-service" name="service" required>
-                            <option value="">Выберите услугу</option>
-                            <option value="Кассовое оборудование">Кассовое оборудование</option>
-                            <option value="Банковское оборудование">Банковское оборудование</option>
-                            <option value="Компьютерная техника">Компьютерная техника</option>
-                            <option value="Техническая поддержка">Техническая поддержка</option>
-                            <option value="Другое">Другое</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="client-message">Описание проблемы</label>
-
-                        <textarea
-                            id="client-message"
-                            name="message"
-                            placeholder="Опишите вашу проблему..."
-                            rows="5"
-                            maxlength="1500"
-                            required
-                        ></textarea>
-                    </div>
-
-                    <button type="submit" class="primary-button" id="submit-button">
-                        Отправить заявку →
-                    </button>
-
-                    <p class="form-status" id="form-status" role="status"></p>
-
-                </form>
-
-            </div>
-        </section>
-
-
-        <!-- CONTACTS -->
-        <section class="contacts section" id="contacts">
-            <div class="container">
-
-                <span class="section-label">СВЯЗЬ С НАМИ</span>
-                <h2>КОНТАКТЫ</h2>
+                <h1>
+                    ТЕХНОЛОГИИ.<br>
+                    НАДЁЖНОСТЬ.<br>
+                    <span>СЕРВИС.</span>
+                </h1>
 
                 <p>
-                    По вопросам ремонта, обслуживания
-                    и сотрудничества оставьте заявку через форму.
+                    Профессиональный ремонт, обслуживание
+                    и настройка компьютерной и кассовой техники.
                 </p>
 
+                <div class="hero-buttons">
+                    <a href="request.html" class="button primary">
+                        Оставить заявку
+                    </a>
+
+                    <a href="catalog.html" class="button secondary">
+                        Наш каталог
+                    </a>
+                </div>
             </div>
-        </section>
 
-    </main>
+            <div class="hero-decoration">
+                <div class="decoration-card">
+                    <span class="decoration-icon">01</span>
+                    <h3>Кассовая техника</h3>
+                    <p>Ремонт и обслуживание оборудования</p>
+                </div>
 
-
-    <!-- FOOTER -->
-    <footer class="footer">
-        <div class="container footer-content">
-
-            <a href="#" class="logo">
-                <span class="logo-name">ИНТЕРКОМ</span>
-                <span class="logo-subtitle">ГРУППА КОМПАНИЙ</span>
-            </a>
-
-            <p>
-                © <span id="current-year">2026</span>
-                ИНТЕРКОМ. Все права защищены.
-            </p>
-
+                <div class="decoration-card second">
+                    <span class="decoration-icon">02</span>
+                    <h3>Компьютеры</h3>
+                    <p>Диагностика и техническая поддержка</p>
+                </div>
+            </div>
         </div>
-    </footer>
+    </section>
 
+    <section class="section">
+        <div class="container">
+            <div class="section-heading">
+                <span class="eyebrow">НАШИ НАПРАВЛЕНИЯ</span>
+                <h2>ЧЕМ МЫ ЗАНИМАЕМСЯ</h2>
+                <p>Технические решения для бизнеса и частных клиентов.</p>
+            </div>
 
-    <script src="script.js"></script>
+            <div class="service-grid">
+                <article class="service-card">
+                    <div class="service-number">01</div>
+                    <div class="service-icon">▣</div>
+                    <h3>Кассовая техника</h3>
+                    <p>Работа с кассовым и банковским оборудованием.</p>
+                    <a href="catalog.html#cash">Подробнее →</a>
+                </article>
 
+                <article class="service-card">
+                    <div class="service-number">02</div>
+                    <div class="service-icon">▤</div>
+                    <h3>Компьютеры</h3>
+                    <p>Ремонт, настройка и обслуживание компьютеров.</p>
+                    <a href="catalog.html#computers">Подробнее →</a>
+                </article>
+
+                <article class="service-card">
+                    <div class="service-number">03</div>
+                    <div class="service-icon">⚙</div>
+                    <h3>Техническое обслуживание</h3>
+                    <p>Поддержка и профилактика оборудования.</p>
+                    <a href="request.html">Оставить заявку →</a>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="about-preview">
+        <div class="container about-content">
+            <div>
+                <span class="eyebrow">ИНТЕРКОМ</span>
+                <h2>ТЕХНИКА ДОЛЖНА РАБОТАТЬ.</h2>
+            </div>
+
+            <div>
+                <p>
+                    Мы работаем с компьютерной, банковской
+                    и кассовой техникой. Наша задача —
+                    помогать оборудованию работать надёжно.
+                </p>
+                <a href="about.html" class="text-link">О нашей компании →</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container cta-content">
+            <div>
+                <span class="eyebrow">ЕСТЬ ВОПРОС ИЛИ ПРОБЛЕМА?</span>
+                <h2>МЫ ГОТОВЫ ПОМОЧЬ</h2>
+                <p>Оставьте заявку, и мы свяжемся с вами.</p>
+            </div>
+
+            <a href="request.html" class="button primary">
+                Оставить заявку
+            </a>
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+    <div class="container footer-content">
+        <div class="logo">
+            <span>ИНТЕРКОМ</span>
+            <small>ГРУППА КОМПАНИЙ</small>
+        </div>
+
+        <p>© <span id="year"></span> ИНТЕРКОМ. Все права защищены.</p>
+    </div>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
