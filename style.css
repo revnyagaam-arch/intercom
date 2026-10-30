@@ -439,3 +439,346 @@ a {
         margin-left: 20px;
     }
 }
+
+/* =========================
+   ADDITIONAL PAGES
+========================= */
+
+/* REQUEST PAGE */
+
+.request-layout {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 65px;
+    align-items: start;
+}
+
+.request-info h2 {
+    font-size: 34px;
+    line-height: 1.2;
+    margin: 15px 0 20px;
+}
+
+.request-info > p {
+    color: var(--muted);
+    font-size: 15px;
+    margin-bottom: 35px;
+}
+
+.request-benefit {
+    display: flex;
+    gap: 18px;
+    align-items: flex-start;
+    margin-bottom: 25px;
+}
+
+.request-benefit > span {
+    color: var(--blue-light);
+    font-size: 14px;
+    font-weight: 900;
+    padding: 12px;
+    background: var(--card);
+    border-radius: 8px;
+}
+
+.request-benefit h3 {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.request-benefit p {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.request-form-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 35px;
+}
+
+.request-form-card h2 {
+    font-size: 25px;
+    margin-bottom: 7px;
+}
+
+.form-description {
+    color: var(--muted);
+    font-size: 13px;
+    margin-bottom: 27px;
+}
+
+#request-form {
+    display: flex;
+    flex-direction: column;
+}
+
+#request-form label {
+    font-size: 13px;
+    font-weight: 700;
+    margin: 16px 0 8px;
+}
+
+#request-form input,
+#request-form select,
+#request-form textarea {
+    width: 100%;
+    padding: 14px;
+    color: white;
+    background: #172f4f;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    outline: none;
+    font-family: inherit;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+#request-form input:focus,
+#request-form select:focus,
+#request-form textarea:focus {
+    border-color: var(--blue);
+    box-shadow: 0 0 0 3px rgba(75,156,255,0.12);
+}
+
+#request-form input::placeholder,
+#request-form textarea::placeholder {
+    color: #8fa5bf;
+}
+
+#request-form select option {
+    background: #172f4f;
+    color: white;
+}
+
+#request-form textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.form-submit {
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    margin-top: 25px;
+}
+
+.form-status {
+    margin-top: 15px;
+    font-size: 13px;
+    color: var(--blue-light);
+}
+
+/* ABOUT PAGE */
+
+.about-page-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 45px;
+    align-items: center;
+}
+
+.about-main h2 {
+    font-size: 35px;
+    line-height: 1.2;
+    margin: 15px 0 25px;
+}
+
+.about-main p {
+    color: var(--muted);
+    font-size: 15px;
+    margin-bottom: 18px;
+}
+
+.about-highlight {
+    padding: 45px 35px;
+    min-height: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    background:
+        radial-gradient(circle at 80% 20%, rgba(75,156,255,0.25), transparent 55%),
+        linear-gradient(135deg, #294d7b, #1b385e);
+}
+
+.about-highlight-number {
+    font-size: 14px;
+    color: var(--blue-light);
+    font-weight: 900;
+    letter-spacing: 5px;
+    margin-bottom: 25px;
+}
+
+.about-highlight h3 {
+    font-size: 29px;
+    line-height: 1.2;
+    margin-bottom: 15px;
+}
+
+.about-highlight p {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+/* CATALOG PAGE */
+
+.page-hero {
+    padding: 75px 0;
+    background:
+        radial-gradient(circle at 80% 50%, rgba(75,156,255,0.15), transparent 35%),
+        var(--bg-light);
+    border-bottom: 1px solid var(--border);
+}
+
+.page-hero h1 {
+    font-size: clamp(38px, 5vw, 58px);
+    font-weight: 900;
+    margin: 15px 0;
+    letter-spacing: -2px;
+}
+
+.page-hero h1 span {
+    color: var(--blue);
+}
+
+.page-hero p {
+    color: var(--muted);
+    font-size: 15px;
+}
+
+.catalog-category {
+    margin-bottom: 75px;
+    scroll-margin-top: 110px;
+}
+
+.category-heading {
+    margin-bottom: 30px;
+}
+
+.category-heading h2 {
+    font-size: clamp(25px, 4vw, 36px);
+    font-weight: 900;
+    margin: 10px 0;
+}
+
+.category-heading p {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.catalog-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.catalog-card {
+    overflow: hidden;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    transition: 0.3s;
+}
+
+.catalog-card:hover {
+    transform: translateY(-6px);
+    background: var(--card-hover);
+    border-color: rgba(75,156,255,0.5);
+}
+
+.catalog-placeholder {
+    min-height: 175px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:
+        radial-gradient(circle, rgba(75,156,255,0.25), transparent 65%),
+        #192f4e;
+    color: var(--blue-light);
+    font-size: 45px;
+    font-weight: 900;
+    letter-spacing: 4px;
+}
+
+.catalog-info {
+    padding: 23px;
+}
+
+.catalog-label {
+    color: var(--blue-light);
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.catalog-info h3 {
+    font-size: 18px;
+    margin: 12px 0 8px;
+}
+
+.catalog-info p {
+    min-height: 48px;
+    color: var(--muted);
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+
+.catalog-link {
+    color: var(--blue-light);
+    font-size: 13px;
+    font-weight: 700;
+    transition: 0.2s;
+}
+
+.catalog-link:hover {
+    color: white;
+}
+
+/* MOBILE */
+
+@media (max-width: 850px) {
+    .request-layout,
+    .about-page-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .catalog-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 580px) {
+    .request-form-card {
+        padding: 23px;
+    }
+
+    .request-info h2,
+    .about-main h2 {
+        font-size: 28px;
+    }
+
+    .about-highlight {
+        padding: 30px 25px;
+    }
+
+    .about-highlight h3 {
+        font-size: 24px;
+    }
+
+    .catalog-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .page-hero {
+        padding: 55px 0;
+    }
+
+    .catalog-placeholder {
+        min-height: 145px;
+    }
+}
