@@ -4,7 +4,7 @@
 
 // НАСТРОЙКИ SUPABASE
 const SUPABASE_URL = "https://anheqefmyqzwjzasucfe.supabase.co";
-const SUPABASE_KEY = "ВСТАВЬ_СЮДА_ПУБЛИЧНЫЙ_SB_PUBLISHABLE_КЛЮЧ";
+const SUPABASE_KEY = "sb_publishable_QSAuukC_BY-Hqa8ue2bhrQ_1Lh_XBVI";
 
 
 // ТЕКУЩИЙ ГОД В ПОДВАЛЕ
