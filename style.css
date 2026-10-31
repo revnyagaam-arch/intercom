@@ -831,3 +831,15 @@ a {
         grid-template-columns: 1fr;
     }
 }
+/* Центрирование заголовков категорий каталога */
+.category-heading.centered-heading {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.category-heading.centered-heading .eyebrow,
+.category-heading.centered-heading h2,
+.category-heading.centered-heading p {
+    text-align: center;
+}
