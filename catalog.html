@@ -5,154 +5,238 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Каталог оборудования — Интерком</title>
     <link rel="stylesheet" href="style.css">
+
+    <style>
+        .catalog-image {
+            height: 220px;
+            overflow: hidden;
+            background: #eaf1f8;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .catalog-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            padding: 14px;
+            transition: transform 0.35s ease;
+        }
+
+        .catalog-tile:hover .catalog-image img {
+            transform: scale(1.06);
+        }
+
+        .catalog-image .image-placeholder {
+            color: #426184;
+            font-size: 15px;
+            font-weight: 600;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .catalog-tile h3 {
+            margin-top: 15px;
+        }
+
+        @media (max-width: 600px) {
+            .catalog-image {
+                height: 160px;
+            }
+        }
+    </style>
 </head>
+
 <body>
 
-    <header class="header">
-        <div class="container nav-container">
-            <a href="index.html" class="logo">
-                <span>ИНТЕРКОМ</span>
-                <small>ГРУППА КОМПАНИЙ</small>
-            </a>
+<header class="header">
+    <div class="container nav-container">
+        <a href="index.html" class="logo">
+            <span>ИНТЕРКОМ</span>
+            <small>ГРУППА КОМПАНИЙ</small>
+        </a>
 
-            <nav class="navigation">
-                <a href="index.html">Главная</a>
-                <a href="catalog.html" class="active">Каталог</a>
-                <a href="about.html">О компании</a>
-                <a href="request.html" class="nav-button">Оставить заявку</a>
-            </nav>
-        </div>
-    </header>
-
-    <section class="page-hero">
-        <div class="container">
-            <span class="eyebrow">НАШИ НАПРАВЛЕНИЯ</span>
-            <h1>КАТАЛОГ <span>ОБОРУДОВАНИЯ</span></h1>
-            <p>Технические решения для бизнеса, торговли и организаций.</p>
-        </div>
-    </section>
-
-    <section class="section">
-        <div class="container">
-
-            <!-- BANK EQUIPMENT -->
-           <div class="catalog-category" id="bank">
-
-    <div class="category-heading" style="text-align: center; width: 100%;">
-        <span class="eyebrow">КАТЕГОРИЯ 01</span>
-        <h2>БАНКОВСКОЕ ОБОРУДОВАНИЕ</h2>
-        <p>Оборудование для обработки, проверки и пересчёта денежных средств.</p>
+        <nav class="navigation">
+            <a href="index.html">Главная</a>
+            <a href="catalog.html" class="active">Каталог</a>
+            <a href="about.html">О компании</a>
+            <a href="request.html" class="nav-button">Оставить заявку</a>
+        </nav>
     </div>
+</header>
 
-                <div class="catalog-grid">
+<section class="page-hero">
+    <div class="container">
+        <span class="eyebrow">НАШИ НАПРАВЛЕНИЯ</span>
+        <h1>КАТАЛОГ <span>ОБОРУДОВАНИЯ</span></h1>
+        <p>Технические решения для бизнеса, торговли и организаций.</p>
+    </div>
+</section>
 
-                    <a href="category.html?type=detectors" class="catalog-tile">
-                        <div class="catalog-image"><span>BD</span></div>
-                        <h3>Детекторы валют</h3>
-                    </a>
+<section class="section">
+    <div class="container">
 
-                    <a href="category.html?type=counters" class="catalog-tile">
-                        <div class="catalog-image"><span>BC</span></div>
-                        <h3>Счётчики банкнот</h3>
-                    </a>
+        <!-- БАНКОВСКОЕ ОБОРУДОВАНИЕ -->
 
-                    <a href="category.html?type=sorters" class="catalog-tile">
-                        <div class="catalog-image"><span>BS</span></div>
-                        <h3>Сортировщики банкнот</h3>
-                    </a>
+        <div class="catalog-category" id="bank">
 
-                    <a href="category.html?type=coins" class="catalog-tile">
-                        <div class="catalog-image"><span>CC</span></div>
-                        <h3>Счётчики монет</h3>
-                    </a>
-
-                    <a href="category.html?type=coin-sorters" class="catalog-tile">
-                        <div class="catalog-image"><span>CS</span></div>
-                        <h3>Сортировщики монет</h3>
-                    </a>
-
-                    <a href="category.html?type=coin-packers" class="catalog-tile">
-                        <div class="catalog-image"><span>CU</span></div>
-                        <h3>Упаковщики монет</h3>
-                    </a>
-
-                    <a href="category.html?type=banknote-packers" class="catalog-tile">
-                        <div class="catalog-image"><span>BU</span></div>
-                        <h3>Упаковщики банкнот</h3>
-                    </a>
-
-                    <a href="category.html?type=cash-equipment" class="catalog-tile">
-                        <div class="catalog-image"><span>CE</span></div>
-                        <h3>Кассовое оборудование</h3>
-                    </a>
-
-                </div>
+            <div class="category-heading" style="text-align: center; width: 100%;">
+                <span class="eyebrow">КАТЕГОРИЯ 01</span>
+                <h2>БАНКОВСКОЕ ОБОРУДОВАНИЕ</h2>
+                <p>Оборудование для обработки, проверки и пересчёта денежных средств.</p>
             </div>
 
-            <!-- COMPUTER EQUIPMENT -->
-            <div class="catalog-category" id="computers">
+            <div class="catalog-grid">
 
-            <div class="category-heading centered-heading">
-                    <span class="eyebrow">КАТЕГОРИЯ 02</span>
-                    <h2>КОМПЬЮТЕРЫ И КОМПЛЕКТУЮЩИЕ</h2>
-                    <p>
-                        Компьютерная техника, комплектующие и периферийные устройства.
-                    </p>
-                </div>
-
-                <div class="catalog-grid">
-
-                    <a href="category.html?type=pc" class="catalog-tile">
-                        <div class="catalog-image"><span>PC</span></div>
-                        <h3>Персональные компьютеры</h3>
-                    </a>
-
-                    <a href="category.html?type=components" class="catalog-tile">
-                        <div class="catalog-image"><span>HW</span></div>
-                        <h3>Комплектующие для ПК</h3>
-                    </a>
-
-                    <a href="category.html?type=peripherals" class="catalog-tile">
-                        <div class="catalog-image"><span>IT</span></div>
-                        <h3>Периферийные устройства</h3>
-                    </a>
-
-                </div>
-            </div>
-
-            <!-- CTA -->
-            <div class="cta-section">
-
-                <div class="cta-content">
-                    <div>
-                        <h2>Не нашли нужное оборудование?</h2>
-                        <p>Свяжитесь с нами, и мы постараемся помочь.</p>
+                <a href="category.html?type=detectors" class="catalog-tile">
+                    <div class="catalog-image">
+                        <img src="images/dors-1250.jpg" alt="Детектор валют DORS 1250"
+                             onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                        <span class="image-placeholder" style="display:none;">Детекторы валют</span>
                     </div>
+                    <h3>Детекторы валют</h3>
+                </a>
 
-                    <a href="request.html" class="button primary">
-                        Оставить заявку
-                    </a>
-                </div>
+                <a href="category.html?type=counters" class="catalog-tile">
+                    <div class="catalog-image">
+                        <img src="images/banknote-counters.jpg" alt="Счётчики банкнот"
+                             onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                        <span class="image-placeholder" style="display:none;">Счётчики банкнот</span>
+                    </div>
+                    <h3>Счётчики банкнот</h3>
+                </a>
+
+                <a href="category.html?type=sorters" class="catalog-tile">
+                    <div class="catalog-image">
+                        <img src="images/banknote-sorters.jpg" alt="Сортировщики банкнот"
+                             onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                        <span class="image-placeholder" style="display:none;">Сортировщики банкнот</span>
+                    </div>
+                    <h3>Сортировщики банкнот</h3>
+                </a>
+
+                <a href="category.html?type=coins" class="catalog-tile">
+                    <div class="catalog-image">
+                        <img src="images/coin-counters.jpg" alt="Счётчики монет"
+                             onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                        <span class="image-placeholder" style="display:none;">Счётчики монет</span>
+                    </div>
+                    <h3>Счётчики монет</h3>
+                </a>
+
+                <a href="category.html?type=coin-sorters" class="catalog-tile">
+                    <div class="catalog-image">
+                        <img src="images/coin-sorters.jpg" alt="Сортировщики монет"
+                             onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                        <span class="image-placeholder" style="display:none;">Сортировщики монет</span>
+                    </div>
+                    <h3>Сортировщики монет</h3>
+                </a>
+
+                <a href="category.html?type=coin-packers" class="catalog-tile">
+                    <div class="catalog-image">
+                        <img src="images/coin-packers.jpg" alt="Упаковщики монет"
+                             onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                        <span class="image-placeholder" style="display:none;">Упаковщики монет</span>
+                    </div>
+                    <h3>Упаковщики монет</h3>
+                </a>
+
+                <a href="category.html?type=banknote-packers" class="catalog-tile">
+                    <div class="catalog-image">
+                        <img src="images/banknote-packers.jpg" alt="Упаковщики банкнот"
+                             onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                        <span class="image-placeholder" style="display:none;">Упаковщики банкнот</span>
+                    </div>
+                    <h3>Упаковщики банкнот</h3>
+                </a>
+
+                <a href="category.html?type=cash-equipment" class="catalog-tile">
+                    <div class="catalog-image">
+                        <img src="images/cash-equipment.jpg" alt="Кассовое оборудование"
+                             onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                        <span class="image-placeholder" style="display:none;">Кассовое оборудование</span>
+                    </div>
+                    <h3>Кассовое оборудование</h3>
+                </a>
 
             </div>
-
         </div>
-    </section>
 
-    <footer class="footer">
-        <div class="container footer-content">
+        <!-- КОМПЬЮТЕРЫ И КОМПЛЕКТУЮЩИЕ -->
 
-            <a href="index.html" class="logo">
-                <span>ИНТЕРКОМ</span>
-                <small>ГРУППА КОМПАНИЙ</small>
-            </a>
+        <div class="catalog-category" id="computers">
 
-            <p>© 2026 Интерком. Все права защищены.</p>
+            <div class="category-heading" style="text-align: center; width: 100%;">
+                <span class="eyebrow">КАТЕГОРИЯ 02</span>
+                <h2>КОМПЬЮТЕРЫ И КОМПЛЕКТУЮЩИЕ</h2>
+                <p>Компьютерная техника, комплектующие и периферийные устройства.</p>
+            </div>
 
+            <div class="catalog-grid">
+
+                <a href="category.html?type=pc" class="catalog-tile">
+                    <div class="catalog-image">
+                        <img src="images/computers.jpg" alt="Персональные компьютеры"
+                             onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                        <span class="image-placeholder" style="display:none;">Персональные компьютеры</span>
+                    </div>
+                    <h3>Персональные компьютеры</h3>
+                </a>
+
+                <a href="category.html?type=components" class="catalog-tile">
+                    <div class="catalog-image">
+                        <img src="images/components.jpg" alt="Комплектующие для ПК"
+                             onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                        <span class="image-placeholder" style="display:none;">Комплектующие для ПК</span>
+                    </div>
+                    <h3>Комплектующие для ПК</h3>
+                </a>
+
+                <a href="category.html?type=peripherals" class="catalog-tile">
+                    <div class="catalog-image">
+                        <img src="images/peripherals.jpg" alt="Периферийные устройства"
+                             onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                        <span class="image-placeholder" style="display:none;">Периферийные устройства</span>
+                    </div>
+                    <h3>Периферийные устройства</h3>
+                </a>
+
+            </div>
         </div>
-    </footer>
 
-    <script src="script.js"></script>
+        <!-- CTA -->
+
+        <div class="cta-section">
+            <div class="cta-content">
+                <div>
+                    <h2>Не нашли нужное оборудование?</h2>
+                    <p>Свяжитесь с нами, и мы постараемся помочь.</p>
+                </div>
+
+                <a href="request.html" class="button primary">
+                    Оставить заявку
+                </a>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="container footer-content">
+        <a href="index.html" class="logo">
+            <span>ИНТЕРКОМ</span>
+            <small>ГРУППА КОМПАНИЙ</small>
+        </a>
+
+        <p>© 2026 Интерком. Все права защищены.</p>
+    </div>
+</footer>
+
+<script src="script.js"></script>
 
 </body>
 </html>
