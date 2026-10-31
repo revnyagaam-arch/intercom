@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Категория — Интерком</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container nav-container">
+
+            <a href="index.html" class="logo">
+                <span>ИНТЕРКОМ</span>
+                <small>ГРУППА КОМПАНИЙ</small>
+            </a>
+
+            <nav class="navigation">
+                <a href="index.html">Главная</a>
+                <a href="catalog.html" class="active">Каталог</a>
+                <a href="about.html">О компании</a>
+                <a href="request.html" class="nav-button">Оставить заявку</a>
+            </nav>
+
+        </div>
+    </header>
+
+    <section class="page-hero">
+        <div class="container">
+
+            <span class="eyebrow">КАТАЛОГ ОБОРУДОВАНИЯ</span>
+
+            <h1 id="category-title">КАТЕГОРИЯ</h1>
+
+            <p>
+                Каталог оборудования Интерком.
+            </p>
+
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+
+            <!-- Здесь позже появятся товары -->
+
+            <a href="catalog.html" class="button primary">
+                ← Вернуться в каталог
+            </a>
+
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer-content">
+
+            <a href="index.html" class="logo">
+                <span>ИНТЕРКОМ</span>
+                <small>ГРУППА КОМПАНИЙ</small>
+            </a>
+
+            <p>© 2026 Интерком. Все права защищены.</p>
+
+        </div>
+    </footer>
+
+    <script>
+        const categories = {
+            detectors: "Детекторы валют",
+            counters: "Счётчики банкнот",
+            sorters: "Сортировщики банкнот",
+            coins: "Счётчики монет",
+            "coin-sorters": "Сортировщики монет",
+            "coin-packers": "Упаковщики монет",
+            "banknote-packers": "Упаковщики банкнот",
+            thermocases: "Термокассы",
+            kkt: "Контрольно-кассовая техника",
+            pc: "Персональные компьютеры",
+            components: "Комплектующие для ПК",
+            peripherals: "Периферийные устройства"
+        };
+
+        const type = new URLSearchParams(window.location.search).get("type");
+        const title = categories[type] || "Категория не найдена";
+
+        document.getElementById("category-title").textContent = title;
+        document.title = title + " — Интерком";
+    </script>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
