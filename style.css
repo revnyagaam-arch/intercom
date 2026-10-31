@@ -40,7 +40,9 @@ a {
     margin: 0 auto;
 }
 
-/* HEADER */
+/* =====================================
+   HEADER
+===================================== */
 
 .header {
     position: sticky;
@@ -109,7 +111,9 @@ a {
     color: #102744;
 }
 
-/* BUTTONS */
+/* =====================================
+   BUTTONS
+===================================== */
 
 .button {
     display: inline-flex;
@@ -142,7 +146,9 @@ a {
     background: var(--card);
 }
 
-/* HERO */
+/* =====================================
+   HERO
+===================================== */
 
 .hero {
     padding: 110px 0;
@@ -225,7 +231,9 @@ a {
     font-size: 13px;
 }
 
-/* SECTIONS */
+/* =====================================
+   SECTIONS
+===================================== */
 
 .section {
     padding: 95px 0;
@@ -306,7 +314,9 @@ a {
     color: white;
 }
 
-/* ABOUT PREVIEW */
+/* =====================================
+   ABOUT PREVIEW
+===================================== */
 
 .about-preview {
     padding: 85px 0;
@@ -328,7 +338,9 @@ a {
     margin-bottom: 22px;
 }
 
-/* CTA */
+/* =====================================
+   CTA
+===================================== */
 
 .cta-section {
     padding: 75px 0;
@@ -350,7 +362,9 @@ a {
     font-size: 14px;
 }
 
-/* FOOTER */
+/* =====================================
+   FOOTER
+===================================== */
 
 .footer {
     border-top: 1px solid var(--border);
@@ -370,7 +384,9 @@ a {
     font-size: 12px;
 }
 
-/* REQUEST PAGE */
+/* =====================================
+   REQUEST PAGE
+===================================== */
 
 .request-layout {
     display: grid;
@@ -497,7 +513,9 @@ a {
     color: var(--blue-light);
 }
 
-/* ABOUT PAGE */
+/* =====================================
+   ABOUT PAGE
+===================================== */
 
 .about-page-grid {
     display: grid;
@@ -550,7 +568,9 @@ a {
     font-size: 14px;
 }
 
-/* CATALOG PAGE */
+/* =====================================
+   CATALOG PAGE
+===================================== */
 
 .page-hero {
     padding: 75px 0;
@@ -576,19 +596,22 @@ a {
     font-size: 15px;
 }
 
+/* CATEGORY */
+
 .catalog-category {
-    margin-bottom: 75px;
+    margin-bottom: 85px;
     scroll-margin-top: 110px;
 }
 
 .category-heading {
-    margin-bottom: 30px;
+    margin-bottom: 35px;
 }
 
 .category-heading h2 {
     font-size: clamp(25px, 4vw, 36px);
     font-weight: 900;
     margin: 10px 0;
+    letter-spacing: -1px;
 }
 
 .category-heading p {
@@ -600,74 +623,76 @@ a {
     text-align: center !important;
 }
 
+/* CATALOG GRID */
+
 .catalog-grid {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 28px 22px;
 }
 
-.catalog-card {
-    overflow: hidden;
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 14px;
-    transition: 0.3s;
+/* CATEGORY TILE */
+
+.catalog-tile {
+    display: block;
+    min-width: 0;
+    text-align: center;
+    transition: transform 0.3s ease;
 }
 
-.catalog-card:hover {
-    transform: translateY(-6px);
-    background: var(--card-hover);
-    border-color: rgba(75,156,255,0.5);
+.catalog-tile:hover {
+    transform: translateY(-7px);
 }
 
-.catalog-placeholder {
+/* IMAGE AREA */
+
+.catalog-image {
     width: 100%;
-    min-height: 175px;
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-    background: linear-gradient(135deg, #244b78, #356da8) !important;
-    color: #ffffff !important;
-    font-size: 38px;
+    aspect-ratio: 1 / 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    padding: 15px;
+    background: #eaf2fb;
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 13px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+    transition: 0.3s ease;
+}
+
+.catalog-tile:hover .catalog-image {
+    box-shadow: 0 15px 35px rgba(0,0,0,0.22);
+    border-color: var(--blue);
+}
+
+/* TEMPORARY IMAGE LABELS */
+
+.catalog-image span {
+    color: #244a78;
+    font-size: 40px;
     font-weight: 900;
-    letter-spacing: 4px;
+    letter-spacing: 3px;
 }
 
-.catalog-info {
-    padding: 23px;
-}
+/* CATEGORY TITLE */
 
-.catalog-label {
+.catalog-tile h3 {
     color: var(--blue-light);
-    font-size: 9px;
-    font-weight: 800;
-    letter-spacing: 1.5px;
-}
-
-.catalog-info h3 {
-    font-size: 18px;
-    margin: 12px 0 8px;
-}
-
-.catalog-info p {
-    min-height: 48px;
-    color: var(--muted);
-    font-size: 13px;
-    margin-bottom: 20px;
-}
-
-.catalog-link {
-    color: var(--blue-light);
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 700;
-    transition: 0.2s;
+    line-height: 1.45;
+    margin-top: 14px;
+    transition: 0.25s;
 }
 
-.catalog-link:hover {
+.catalog-tile:hover h3 {
     color: white;
 }
 
-/* CENTERED REQUEST FORM */
+/* =====================================
+   CENTERED REQUEST FORM
+===================================== */
 
 .request-centered {
     display: flex;
@@ -682,9 +707,12 @@ a {
     flex: none;
 }
 
-/* RESPONSIVE */
+/* =====================================
+   RESPONSIVE
+===================================== */
 
 @media (max-width: 850px) {
+
     .nav-container {
         flex-direction: column;
         padding: 18px 0;
@@ -716,11 +744,25 @@ a {
     }
 
     .catalog-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 25px 18px;
+    }
+}
+
+@media (max-width: 750px) {
+
+    .catalog-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 22px 16px;
+    }
+
+    .catalog-category {
+        margin-bottom: 65px;
     }
 }
 
 @media (max-width: 580px) {
+
     .navigation {
         gap: 12px;
     }
@@ -778,34 +820,14 @@ a {
         font-size: 24px;
     }
 
-    .catalog-grid {
-        grid-template-columns: 1fr;
-    }
-
     .page-hero {
         padding: 55px 0;
     }
-
-    .catalog-placeholder {
-        min-height: 145px;
-    }
 }
 
-/* Центрирование кассовой техники */
+@media (max-width: 380px) {
 
-.cash-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    max-width: 780px;
-    margin: 0 auto;
-}
-
-.centered-heading {
-    text-align: center !important;
-}
-
-@media (max-width: 580px) {
-    .cash-grid {
+    .catalog-grid {
         grid-template-columns: 1fr;
     }
 }
-
