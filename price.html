@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Прейскурант — Интерком</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .price-section {
+            padding: 60px 0;
+        }
+
+        .price-intro {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .price-intro p {
+            color: #9aadc3;
+            margin-top: 12px;
+        }
+
+        .price-table-wrap {
+            overflow-x: auto;
+            background: #fff;
+            border-radius: 14px;
+            margin-bottom: 30px;
+        }
+
+        .price-table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 650px;
+            color: #203650;
+        }
+
+        .price-table th {
+            background: #eaf1f8;
+            color: #17365c;
+            padding: 17px 14px;
+            text-align: left;
+        }
+
+        .price-table td {
+            padding: 15px 14px;
+            border-bottom: 1px solid #e5ebf2;
+        }
+
+        .price-table .category-row td {
+            background: #17365c;
+            color: white;
+            font-weight: 700;
+        }
+
+        .price-table td:not(:first-child),
+        .price-table th:not(:first-child) {
+            text-align: center;
+        }
+
+        .price-notes {
+            color: #a9bad0;
+            line-height: 1.8;
+            font-size: 14px;
+            margin-top: 25px;
+        }
+
+        .price-definitions {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 18px;
+            margin-top: 45px;
+        }
+
+        .price-definition {
+            background: #1b385e;
+            border: 1px solid #315276;
+            border-radius: 12px;
+            padding: 22px;
+        }
+
+        .price-definition h3 {
+            color: #fff;
+            margin-bottom: 10px;
+        }
+
+        .price-definition p {
+            color: #b8c9dc;
+            line-height: 1.6;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header class="header">
+    <div class="container nav-container">
+        <a href="index.html" class="logo">
+            <span>ИНТЕРКОМ</span>
+            <small>ГРУППА КОМПАНИЙ</small>
+        </a>
+
+        <nav class="navigation">
+            <a href="index.html">Главная</a>
+            <a href="catalog.html">Каталог</a>
+            <a href="price.html" class="active">Прейскурант</a>
+            <a href="about.html">О компании</a>
+            <a href="request.html" class="nav-button">Оставить заявку</a>
+        </nav>
+    </div>
+</header>
+
+<section class="page-hero">
+    <div class="container">
+        <span class="eyebrow">СТОИМОСТЬ УСЛУГ</span>
+        <h1>НАШ <span>ПРЕЙСКУРАНТ</span></h1>
+        <p>Стоимость обслуживания и ремонта специального банковского оборудования.</p>
+    </div>
+</section>
+
+<section class="price-section">
+    <div class="container">
+
+        <div class="price-intro">
+            <span class="eyebrow">2026 ГОД</span>
+            <h2>Специальное банковское оборудование</h2>
+            <p>Стоимость работ указана в рублях, без НДС.</p>
+        </div>
+
+        <div class="price-table-wrap">
+            <table class="price-table">
+                <thead>
+                    <tr>
+                        <th>Оборудование</th>
+                        <th>Обслуживание</th>
+                        <th>Ремонт</th>
+                        <th>Обновление ПО</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr class="category-row">
+                        <td colspan="4">Детекторы банкнот</td>
+                    </tr>
+                    <tr>
+                        <td>Универсальный просмотровый детектор</td>
+                        <td>—</td>
+                        <td>1 800 ₽</td>
+                        <td>—</td>
+                    </tr>
+                    <tr>
+                        <td>Автоматический детектор банкнот</td>
+                        <td>1 200 ₽</td>
+                        <td>1 800 ₽</td>
+                        <td>1 200 ₽</td>
+                    </tr>
+
+                    <tr class="category-row">
+                        <td colspan="4">Счётчики и сортировщики банкнот и монет</td>
+                    </tr>
+                    <tr>
+                        <td>Счётчик без определения номинала банкнот</td>
+                        <td>1 800 ₽</td>
+                        <td>2 900 ₽</td>
+                        <td>—</td>
+                    </tr>
+                    <tr>
+                        <td>Счётчик с определением номинала банкнот</td>
+                        <td>2 200 ₽</td>
+                        <td>3 200 ₽</td>
+                        <td>1 800 ₽</td>
+                    </tr>
+                    <tr>
+                        <td>Счётчик/сортировщик банкнот с карманом отбраковки</td>
+                        <td>3 000 ₽</td>
+                        <td>4 400 ₽</td>
+                        <td>2 400 ₽</td>
+                    </tr>
+                    <tr>
+                        <td>Сортировщик банкнот с числом карманов более двух</td>
+                        <td>4 200 ₽</td>
+                        <td>6 300 ₽</td>
+                        <td>3 600 ₽</td>
+                    </tr>
+                    <tr>
+                        <td>Счётчик монет</td>
+                        <td>1 900 ₽</td>
+                        <td>2 800 ₽</td>
+                        <td>—</td>
+                    </tr>
+                    <tr>
+                        <td>Сортировщик монет, до 500 монет в минуту</td>
+                        <td>2 500 ₽</td>
+                        <td>3 700 ₽</td>
+                        <td>—</td>
+                    </tr>
+                    <tr>
+                        <td>Сортировщик монет, более 500 монет в минуту</td>
+                        <td>3 100 ₽</td>
+                        <td>4 500 ₽</td>
+                        <td>—</td>
+                    </tr>
+
+                    <tr class="category-row">
+                        <td colspan="4">Прочее оборудование и услуги</td>
+                    </tr>
+                    <tr>
+                        <td>Безвакуумный упаковщик</td>
+                        <td>1 800 ₽</td>
+                        <td>2 900 ₽</td>
+                        <td>—</td>
+                    </tr>
+                    <tr>
+                        <td>Вакуумный упаковщик</td>
+                        <td>3 200 ₽</td>
+                        <td>4 500 ₽</td>
+                        <td>—</td>
+                    </tr>
+                    <tr>
+                        <td>Выезд к заказчику</td>
+                        <td>500 ₽</td>
+                        <td>—</td>
+                        <td>—</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="price-notes">
+            <p>* В стоимость ремонта не включены расходные материалы,
+            запасные части и программное обеспечение.</p>
+
+            <p>Стоимость услуг, не указанных в прейскуранте,
+            согласовывается с заказчиком дополнительно.</p>
+
+            <p>В случае отказа заказчика от ремонта взимается
+            оплата за диагностику оборудования — 1 500 ₽.</p>
+        </div>
+
+        <div class="price-definitions">
+            <div class="price-definition">
+                <h3>Диагностика</h3>
+                <p>Определение причины неисправности в работе оборудования.</p>
+            </div>
+
+            <div class="price-definition">
+                <h3>Техническое обслуживание</h3>
+                <p>Комплекс мероприятий по поддержанию оборудования
+                в рабочем состоянии без обновления ПО и замены запчастей.</p>
+            </div>
+
+            <div class="price-definition">
+                <h3>Ремонт</h3>
+                <p>Восстановление работоспособности оборудования,
+                с заменой или без замены повреждённых компонентов.</p>
+            </div>
+
+            <div class="price-definition">
+                <h3>Обновление ПО</h3>
+                <p>Обновление доступного нового программного обеспечения
+                для соответствующей модели оборудования.</p>
+            </div>
+        </div>
+
+        <div class="cta-section" style="margin-top: 50px;">
+            <div class="cta-content">
+                <div>
+                    <h2>Нужна помощь с оборудованием?</h2>
+                    <p>Свяжитесь с нами для уточнения стоимости работ.</p>
+                </div>
+
+                <a href="request.html" class="button primary">
+                    Оставить заявку
+                </a>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="container footer-content">
+        <a href="index.html" class="logo">
+            <span>ИНТЕРКОМ</span>
+            <small>ГРУППА КОМПАНИЙ</small>
+        </a>
+
+        <p>© 2026 Интерком. Все права защищены.</p>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
+```
